@@ -427,6 +427,41 @@ Flask to create the server. Server is deployed in heroku with a proper CI/CD pip
 </div>
 
 </div>
+<section>
+  <h1>GeeksForGeeks</h1>
+  <table id='table'>
+      <tr>
+          <th>GFG UserHandle</th>
+          <th>Practice Problems</th>
+          <th>Coding Score</th>
+          <th>GFG Articles</th>
+      </tr>
+      <script>
+          $(document).ready(function () {
+              $.getJSON("https://samarjit01.github.io/localData.json", 
+                  function (data) {
+                  var student = '';
+                  $.each(data, function (key, value) {
+                      student += '<tr>';
+                      student += '<td>' + 
+                          value.GFGUserName + '</td>';
+
+                      student += '<td>' + 
+                          value.NoOfProblems + '</td>';
+
+                      student += '<td>' + 
+                          value.TotalScore + '</td>';
+
+                      student += '<td>' + 
+                          value.Articles + '</td>';
+
+                      student += '</tr>';
+                  });
+                  $('#table').append(student);
+              });
+          });
+      </script>
+</section>
 
 </body>
 </html>
