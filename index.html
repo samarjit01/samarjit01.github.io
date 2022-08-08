@@ -447,15 +447,15 @@
     <div class="row">
   <div class="col-3">
     <div class="nav flex-column nav-pills ml-4" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-      <a class="nav-link active" id="v-pills-Description-tab" data-toggle="pill" href="#v-pills-Description-3" role="tab" aria-controls="v-pills-Description" aria-selected="true">Description</a>
-      <a class="nav-link" id="v-pills-People-tab" data-toggle="pill" href="#v-pills-People-3" role="tab" aria-controls="v-pills-People" aria-selected="false">People</a>
-      <a class="nav-link" id="v-pills-Tools-tab" data-toggle="pill" href="#v-pills-Tools-3" role="tab" aria-controls="v-pills-Tools" aria-selected="false">Tools</a>
-      <a class="nav-link" id="v-pills-Screenshots-tab" data-toggle="pill" href="#v-pills-Screenshots-3" role="tab" aria-controls="v-pills-Screenshots" aria-selected="false">Screenshots</a>
+      <a class="nav-link active" id="v-pills-Description-tab" data-toggle="pill" href="#v-pills-Description-$id$" role="tab" aria-controls="v-pills-Description" aria-selected="true">Description</a>
+      <a class="nav-link" id="v-pills-People-tab" data-toggle="pill" href="#v-pills-People-$id$" role="tab" aria-controls="v-pills-People" aria-selected="false">People</a>
+      <a class="nav-link" id="v-pills-Tools-tab" data-toggle="pill" href="#v-pills-Tools-$id$" role="tab" aria-controls="v-pills-Tools" aria-selected="false">Tools</a>
+      <a class="nav-link" id="v-pills-Screenshots-tab" data-toggle="pill" href="#v-pills-Screenshots-$id$" role="tab" aria-controls="v-pills-Screenshots" aria-selected="false">Screenshots</a>
     </div>
   </div>
   <div class="col-9">
     <div class="tab-content" id="v-pills-tabContent">
-      <div class="tab-pane fade show active" id="v-pills-Description-3" role="tabpanel" aria-labelledby="v-pills-Description-tab">
+      <div class="tab-pane fade show active" id="v-pills-Description-$id$" role="tabpanel" aria-labelledby="v-pills-Description-tab">
 
         <p align="justify" class="font-small mx-5">`;
           var desc = `Real-time card game with four players in a game board. High-level design of backend server was done using proper design patterns and implemented following the SOLID principals and object calisthenics. Python is used for the BE.Using SocketIO messaging, interaction of players is implemented. Used
@@ -465,14 +465,14 @@ Flask to create the server. Server is deployed in heroku with a proper CI/CD pip
           var seg5 = `" class="card-link"></p><p align="justify" class="font-small mx-5">Link to project <i class="fa fa-github" ></i></a></p>
 
       </div>
-      <div class="tab-pane fade" id="v-pills-People-3" role="tabpanel" aria-labelledby="v-pills-People-tab">
+      <div class="tab-pane fade" id="v-pills-People-$id$" role="tabpanel" aria-labelledby="v-pills-People-tab">
 
         <p align="justify" class="font-small mx-5"><b>Contributor :</b> `
           var contributor = `Samarjit Pal`;
           var seg6 = `</p>
 
       </div>
-      <div class="tab-pane fade" id="v-pills-Tools-3" role="tabpanel" aria-labelledby="v-pills-Tools-tab">
+      <div class="tab-pane fade" id="v-pills-Tools-$id$" role="tabpanel" aria-labelledby="v-pills-Tools-tab">
         
         <p align="justify" class="font-small mx-5"><b>Language :</b> `;
           var language = `Python(BackEnd) ;  NodeJs , ReactJs (FrontEnd)`;
@@ -485,7 +485,7 @@ Flask to create the server. Server is deployed in heroku with a proper CI/CD pip
           var seg9 = `</p>
 
       </div>
-      <div class="tab-pane fade" id="v-pills-Screenshots-3" role="tabpanel" aria-labelledby="v-pills-Screenshots-tab">...</div>
+      <div class="tab-pane fade" id="v-pills-Screenshots-$id$" role="tabpanel" aria-labelledby="v-pills-Screenshots-tab">...</div>
     </div>
   </div>
 </div>
@@ -511,6 +511,7 @@ Flask to create the server. Server is deployed in heroku with a proper CI/CD pip
             projectElement += seg8;
             projectElement += value.projectDeployment;
             projectElement += seg9;
+            projectElement = projectElement.replaceAll("$id$", key);
             $('#Projects').append(projectElement);
           });
         });
