@@ -275,80 +275,6 @@
     <div class="row " style="margin-top:10rem;">
       <div id="Projects" class="container">
         <h3><b>Projects</b></h3>
-
-        <!-- starts -->
-        <div class="row mt-5">
-          <!-- Project -->
-          <div class="card chart-card" style="width: 100%;border-style: none">
-
-            <!-- Card content -->
-            <div class="card-body">
-              <h3 class="card-title">Multiplayer CardGame using SocketIO</h3>
-              <h6 class="card-subtitle text-muted">Apr-May 2020</h6>
-
-            </div>
-
-            <!-- Classic tabs -->
-            <div class="classic-tabs">
-              <div class="row">
-                <div class="col-3">
-                  <div class="nav flex-column nav-pills ml-4" id="v-pills-tab" role="tablist"
-                    aria-orientation="vertical">
-                    <a class="nav-link active" id="v-pills-Description-tab" data-toggle="pill"
-                      href="#v-pills-Description-3" role="tab" aria-controls="v-pills-Description"
-                      aria-selected="true">Description</a>
-                    <a class="nav-link" id="v-pills-People-tab" data-toggle="pill" href="#v-pills-People-3" role="tab"
-                      aria-controls="v-pills-People" aria-selected="false">People</a>
-                    <a class="nav-link" id="v-pills-Tools-tab" data-toggle="pill" href="#v-pills-Tools-3" role="tab"
-                      aria-controls="v-pills-Tools" aria-selected="false">Tools</a>
-                    <a class="nav-link" id="v-pills-Screenshots-tab" data-toggle="pill" href="#v-pills-Screenshots-3"
-                      role="tab" aria-controls="v-pills-Screenshots" aria-selected="false">Screenshots</a>
-                  </div>
-                </div>
-                <div class="col-9">
-                  <div class="tab-content" id="v-pills-tabContent">
-                    <div class="tab-pane fade show active" id="v-pills-Description-3" role="tabpanel"
-                      aria-labelledby="v-pills-Description-tab">
-
-                      <p align="justify" class="font-small mx-5">Real-time card game with four players in a game board.
-                        High-level design of backend server was done using proper design patterns and implemented
-                        following the SOLID principals and object calisthenics. Python is used for the BE.Using SocketIO
-                        messaging, interaction of players is implemented. Used
-                        Flask to create the server. Server is deployed in heroku with a proper CI/CD pipeline supporting
-                        dev app, staging app and production app. SDLC is used to provide high quality service.Frontend
-                        is developed using ReactJs. ReactBootstrap is used to support responsive web pages.
-                        Containerization was done using docker. Go script is used to start the FE server.<a
-                          href="https://github.com/samarjit01/card-game-server" class="card-link"></p>
-                      <p align="justify" class="font-small mx-5">Link to project <i class="fa fa-github"></i></a></p>
-
-                    </div>
-                    <div class="tab-pane fade" id="v-pills-People-3" role="tabpanel"
-                      aria-labelledby="v-pills-People-tab">
-
-                      <p align="justify" class="font-small mx-5"><b>Contributor :</b> Samarjit Pal</p>
-
-                    </div>
-                    <div class="tab-pane fade" id="v-pills-Tools-3" role="tabpanel" aria-labelledby="v-pills-Tools-tab">
-
-                      <p align="justify" class="font-small mx-5"><b>Language :</b> Python(BackEnd) ; NodeJs , ReactJs
-                        (FrontEnd) </p>
-                      <p align="justify" class="font-small mx-5"><b>Library :</b> SocketIO </p>
-                      <p align="justify" class="font-small mx-5"><b>Deployment : </b> Docker , Heroku</p>
-
-                    </div>
-                    <div class="tab-pane fade" id="v-pills-Screenshots-3" role="tabpanel"
-                      aria-labelledby="v-pills-Screenshots-tab">...</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Card -->
-          </div>
-        </div>
-
-
-
-        <!-- ends-->
         <div class="row mt-5">
           <!-- Project -->
           <div class="card chart-card" style="width: 100%;border-style: none">
@@ -569,21 +495,21 @@ Flask to create the server. Server is deployed in heroku with a proper CI/CD pip
 </div>`;
           var projectElement = seg1;
           $.each(data, function (key, value) {
-           projectElement += title;
+            projectElement += value.projectTitle;
             projectElement += seg2;
-            projectElement += time;
+            projectElement += value.projectTime;
             projectElement += seg3;
-            projectElement += desc;
+            projectElement += value.projectDescription;
             projectElement += seg4;
-            projectElement += projectLink;
+            projectElement += value.projectLink;
             projectElement += seg5;
-            projectElement += contributor;
+            projectElement += value.projectContributor;
             projectElement += seg6;
-            projectElement += language;
+            projectElement += value.projectLanguage;
             projectElement += seg7;
-            projectElement += library;
+            projectElement += value.projectLibrary;
             projectElement += seg8;
-            projectElement += deployment;
+            projectElement += value.projectDeployment;
             projectElement += seg9;
             $('#Projects').append(projectElement);
           });
