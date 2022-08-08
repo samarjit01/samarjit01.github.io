@@ -7,6 +7,26 @@
         "projectContributor": "Samarjit Pal",
         "projectLanguage": "Python(BackEnd) ;  NodeJs , ReactJs (FrontEnd)",
         "projectLibrary": "SocketIO",
-        "projectDeployment": "`Docker , Heroku"
+        "projectDeployment": "Docker , Heroku"
+    },
+    {
+        "projectTitle": "Recommendation System for Banking Products based on multiclass classification",
+        "projectTime": "Jun-Jul 2019",
+        "projectDescription": "Performed exploratory analysis on dataset for feature engineering to extract most important features . Used xgboost as multiclass classifier to obtain minimal logloss. After exctracting most important features did feature engineering to build the decision tree.",
+        "projectLink": "https://github.com/samarjit01/Bank_Product_Recommendation",
+        "projectContributor": "Samarjit Pal",
+        "projectLanguage": "Python",
+        "projectLibrary": "XGBoost",
+        "projectDeployment": "Jupyter Nootbook"
+    },
+    {
+        "projectTitle": "Efficient Insurance System Using Blockchain on a hyperledger network",
+        "projectTime": "Jan-Apr 2019",
+        "projectDescription": "Built a system to implement efficient insurance system which is more reliable, secure, transparent then the present system used blockchain technology as it will help the system be more reliable and transparent. The system is created to connect peers, namely customer, insurance, police, service center shop and to deploy a fully working system so that the peers can do successful transaction among themselves.",
+        "projectLink": "https://github.com/samarjit01/Blockchain_Project",
+        "projectContributor": "Samarjit Pal,Vikas Chaurasiya, Neil Dutta",
+        "projectLanguage": "NodeJs , Go , Bash",
+        "projectLibrary": "Hyperledger fabric",
+        "projectDeployment": "Docker , Docker Swarm"
     }
 ]
