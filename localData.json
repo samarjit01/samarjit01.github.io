@@ -1,5 +1,12 @@
 [
-    {"GFGUserName" : "a", "NoOfProblems" : "a", "TotalScore" : "a", "Articles" : "c" },
-    {"GFGUserName" : "b", "NoOfProblems" : "a", "TotalScore" : "a", "Articles" : "c" },
-    {"GFGUserName" : "c", "NoOfProblems" : "a", "TotalScore" : "a", "Articles" : "c" }
+    {
+        "projectTitle": "Multiplayer CardGame using SocketIO",
+        "projectTime": "Apr-May 2020",
+        "projectDescription": "Real-time card game with four players in a game board. High-level design of backend server was done using proper design patterns and implemented following the SOLID principals and object calisthenics. Python is used for the BE.Using SocketIO messaging, interaction of players is implemented. Used Flask to create the server. Server is deployed in heroku with a proper CI/CD pipeline supporting dev app, staging app and production app. SDLC is used to provide high quality service.Frontend is developed using ReactJs. ReactBootstrap is used to support responsive web pages. Containerization was done using docker. Go script is used to start the FE server.",
+        "projectLink": "https://github.com/samarjit01/card-game-server",
+        "projectContributor": "Samarjit Pal",
+        "projectLanguage": "Python(BackEnd) ;  NodeJs , ReactJs (FrontEnd)",
+        "projectLibrary": "SocketIO",
+        "projectDeployment": "`Docker , Heroku"
+    }
 ]
